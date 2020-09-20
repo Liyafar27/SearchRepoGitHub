@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:background="#F0F4C3"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search for GitHub Repositories" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search" />
+
+        <Button
+            android:id="@+id/showFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Add Filters" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/filters_layout"
+        android:layout_width="348dp"
+        android:layout_height="match_parent">
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/sizeFilter"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@+id/textView"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_alignParentLeft="true"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:text="Size:"-->
+        <!--            android:textAppearance="?android:attr/textAppearanceMedium" />-->
+
+        <!--        <Spinner-->
+        <!--            android:id="@+id/limitSizeSpinner"-->
+        <!--            android:layout_width="110dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@+id/textView"-->
+        <!--            android:layout_toEndOf="@+id/sizeFilter"-->
+        <!--            android:layout_toRightOf="@+id/sizeFilter" />-->
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/size"-->
+        <!--            android:layout_width="80dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@id/textView"-->
+        <!--            android:layout_toRightOf="@+id/limitSizeSpinner"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="Enter Size"-->
+        <!--            android:inputType="number"-->
+        <!--            android:textSize="@dimen/abc_text_size_small_material" />-->
+
+        <!--        <Spinner-->
+        <!--            android:id="@+id/sizeDimenSpinner"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@id/textView"-->
+        <!--            android:layout_toRightOf="@+id/size" />-->
+
+        <!--        <View-->
+        <!--            android:id="@+id/view"-->
+        <!--            android:layout_width="fill_parent"-->
+        <!--            android:layout_height="10dp"-->
+        <!--            android:layout_below="@+id/sizeFilter" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/forks"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@+id/view"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_alignParentLeft="true"-->
+        <!--            android:text="Forks:"-->
+        <!--            android:textAppearance="?android:attr/textAppearanceMedium" />-->
+
+        <!--        <Spinner-->
+        <!--            android:id="@+id/forksLimitSpinner"-->
+        <!--            android:layout_width="110dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@+id/view"-->
+        <!--            android:layout_toRightOf="@+id/forks" />-->
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/forksSize"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@+id/view"-->
+        <!--            android:layout_toRightOf="@id/forksLimitSpinner"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="Enter Limit"-->
+        <!--            android:inputType="number"-->
+        <!--            android:textSize="@dimen/abc_text_size_small_material" />-->
+
+        <!--        <View-->
+        <!--            android:id="@+id/view1"-->
+        <!--            android:layout_width="fill_parent"-->
+        <!--            android:layout_height="10dp"-->
+        <!--            android:layout_below="@+id/forks" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/Language"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@+id/view1"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_alignParentLeft="true"-->
+        <!--            android:text="Language"-->
+        <!--            android:textAppearance="?android:attr/textAppearanceMedium" />-->
+
+        <!--        <Spinner-->
+        <!--            android:id="@+id/LanguageIncludeSpinner"-->
+        <!--            android:layout_width="120dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@+id/view1"-->
+        <!--            android:layout_toEndOf="@+id/Language"-->
+        <!--            android:layout_toRightOf="@+id/Language" />-->
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/languageName"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@id/view1"-->
+        <!--            android:layout_toRightOf="@+id/LanguageIncludeSpinner"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="Language"-->
+        <!--            android:inputType="textPersonName"-->
+        <!--            android:textSize="@dimen/abc_text_size_small_material" />-->
+
+        <!--        <View-->
+        <!--            android:id="@+id/view2"-->
+        <!--            android:layout_width="fill_parent"-->
+        <!--            android:layout_height="10dp"-->
+        <!--            android:layout_below="@+id/Language" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/order"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@+id/sortRepo"-->
+        <!--            android:layout_alignParentLeft="true"-->
+        <!--            android:text="Order In :"-->
+        <!--            android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+        <!--        <Spinner-->
+        <!--            android:id="@+id/orderBy"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:layout_below="@id/sortRepo"-->
+        <!--            android:layout_toRightOf="@+id/order" />-->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="filtrer:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/sortRepo"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="151dp"
+            android:layout_marginLeft="151dp"
+            android:layout_marginEnd="71dp"
+            android:layout_toStartOf="@+id/clearFilters"
+            android:text="Sort By: "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Spinner
+            android:id="@+id/sortFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/sortRepo" />
+
+        <Button
+            android:id="@+id/clearFilters"
+            android:layout_width="59dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="185dp"
+            android:layout_marginLeft="215dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="125dp"
+            android:layout_toRightOf="@+id/textView"
+            android:padding="0dp"
+            android:text="Clear All"
+            android:textSize="8dp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
