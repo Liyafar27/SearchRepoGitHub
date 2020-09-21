@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         EditText searchText,sizeOfRepo,forksSize, languageName;
         Boolean showFilters = false;
         Spinner sortFilter;
-//        limitSizeSpinner,sizeDimenSpinner,forkLimitSpinner,languageIncludeSpinner, orderBy;
 
 
         @Override
@@ -38,53 +37,17 @@ public class MainActivity extends AppCompatActivity {
             filters = (Button) findViewById(R.id.showFilters);
             searchText = (EditText) findViewById(R.id.searchText);
             clearFilters = (Button) findViewById(R.id.clearFilters);
-
-            //size filter elements
-//            limitSizeSpinner = (Spinner) findViewById(R.id.limitSizeSpinner);
-//            sizeOfRepo = (EditText) findViewById(R.id.size);
-//            sizeDimenSpinner = (Spinner) findViewById(R.id.sizeDimenSpinner);
-//
-//            //forks filter elements
-//            forkLimitSpinner = (Spinner) findViewById(R.id.forksLimitSpinner);
-//            forksSize =(EditText) findViewById(R.id.forksSize);
-//
-//            //language filter elements
-//            languageIncludeSpinner = (Spinner) findViewById(R.id.LanguageIncludeSpinner);
-//            languageName = (EditText) findViewById(R.id.languageName);
-//
+           
             //sortBy filter element
             sortFilter = (Spinner) findViewById(R.id.sortFilter);
-//
-//            //orderBy filter element
-//            orderBy = (Spinner) findViewById(R.id.orderBy);
+                     
+            //Add value  spinners=========================================================================                                                               
+                                 
 
-
-            //Add value  spinners=========================================================================
-//            String[] a = new String[]{"Less than", "Greater than"};
-//            ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item, a);
-//            limitSizeSpinner.setAdapter(adapter1);
-//
-//            String[] b = new String[]{"KB", "MB", "GB"};
-//            ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item, b);
-//            sizeDimenSpinner.setAdapter(adapter2);
-//
-//            String[] c = new String[]{"More than", "Less than"};
-//            ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item, c);
-//            forkLimitSpinner.setAdapter(adapter3);
-
-//            String[] d = new String[]{"Include Only", "Exclude"};
-//            ArrayAdapter<String> adapter4 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item, d);
-//            languageIncludeSpinner.setAdapter(adapter4);
-//
             String[] e = new String[]{"Best Match", "stars", "forks", "updated"};
             ArrayAdapter<String> adapter5 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item, e);
             sortFilter.setAdapter(adapter5);
-//
-//            String[] f = new String[]{"Desc", "Asc"};
-//            ArrayAdapter<String> adapter6 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item, f);
-//            orderBy.setAdapter(adapter6);
-//            //======================================================================================================
-
+                                      //======================================================================================================
             //initially hide filters by default
             final RelativeLayout filters_layout = (RelativeLayout) findViewById(R.id.filters_layout);
             filters_layout.setVisibility(View.INVISIBLE);
@@ -153,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //Since GitHub api provide flexibility to use filters, we just need to manipulate the searchText that we will send to API
 
-                    //manipulation for size filter
+                    
 //                    String x = sizeOfRepo.getText().toString();
 //                    String x3 = "";
 //                    String x4 = "";
